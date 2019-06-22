@@ -1,0 +1,21 @@
+package:
+  name: lmfit-c
+  version: {{ environ.GIT_DESCRIBE_TAG[1:] }}.post{{ environ.GIT_DESCRIBE_NUMBER }}
+
+source:
+  git_url: https://github.com/NSLS-II/lmfit
+  git_rev: master
+
+build:
+  skip: True  # [win and not py35]
+  number: 3
+  features:
+    - vc14  # [win and py>=35]
+
+requirements:
+  build:
+    - cmake
+
+about:
+  home: https://github.com/NSLS-II/lmfit
+  license: FreeBSD
