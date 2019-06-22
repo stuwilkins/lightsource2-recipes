@@ -1,0 +1,38 @@
+package:
+  name: pycentroids
+  version: {{ environ.GIT_DESCRIBE_TAG[1:] }}.post{{ environ.GIT_DESCRIBE_NUMBER }}
+
+source:
+  git_url: https://github.com/NSLS-II/centroids
+  git_rev: master
+
+build:
+  number: 0
+  script: python setup.py install
+  skip: True  # [py2k]
+
+requirements:
+  build:
+    - setuptools
+    - python
+    - numpy x.x
+    - pytest
+    - cmake
+    - pandas
+    - lmfit-c
+
+  run:
+    - lmfit
+    - pandas
+    - python
+    - numpy x.x
+
+test:
+  requires:
+    - pytest
+  imports:
+    - pycentroids
+
+about:
+  home: https://github.com/NSLS-II/centroids
+  license: BSD 3-clause
