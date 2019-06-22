@@ -20,6 +20,7 @@ requirements:
     - cmake
     - pandas
     - lmfit-c
+    - pybind11
 
   run:
     - lmfit
