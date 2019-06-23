@@ -7,10 +7,7 @@ source:
   git_rev: master
 
 build:
-  skip: True  # [win and not py35]
   number: 3
-  features:
-    - vc14  # [win and py>=35]
 
 requirements:
   build:
