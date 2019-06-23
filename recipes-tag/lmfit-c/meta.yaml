@@ -7,11 +7,12 @@ source:
   git_rev: 5f540ec733489970d1a190e51be2ded9e413e61a
 
 build:
-  number: 3
+  number: 10
 
 requirements:
   build:
     - cmake
+    - gcc_linux-64
 
 about:
   home: https://github.com/NSLS-II/lmfit
