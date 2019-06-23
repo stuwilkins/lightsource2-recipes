@@ -1,4 +1,4 @@
-{% set version = "0.1.2" %}
+{% set version = "0.1.4" %}
 
 package:
   name: pycentroids
@@ -9,7 +9,7 @@ source:
   git_rev: v{{ version }}
 
 build:
-  number: 10
+  number: 0
   script: python setup.py install
 
 requirements:
@@ -23,6 +23,7 @@ requirements:
     - lmfit-c
     - pybind11
     - gxx_linux-64
+    - cpplint
 
   run:
     - lmfit-c
@@ -39,3 +40,7 @@ test:
 about:
   home: https://github.com/NSLS-II/centroids
   license: BSD 3-clause
+
+extra:
+  recipe-maintainers:
+    - stuwilkins

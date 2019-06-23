@@ -21,6 +21,7 @@ requirements:
     - lmfit-c
     - pybind11
     - gxx_linux-64
+    - cpplint
 
   run:
     - lmfit-c
@@ -37,3 +38,7 @@ test:
 about:
   home: https://github.com/NSLS-II/centroids
   license: BSD 3-clause
+
+extra:
+  recipe-maintainers:
+    - stuwilkins
