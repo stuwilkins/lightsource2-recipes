@@ -17,3 +17,7 @@ requirements:
 about:
   home: https://github.com/NSLS-II/lmfit
   license: FreeBSD
+    
+extra:
+  recipe-maintainers:
+    - stuwilkins
